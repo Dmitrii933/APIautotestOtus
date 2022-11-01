@@ -8,8 +8,7 @@ import static io.restassured.RestAssured.given;
 public class Specification {
         private RequestSpecification specification;
 
-        private  static final String BASE_URL="https://petstore.swagger.io/v2";
-       public RequestSpecification spec() {
+       public RequestSpecification spec(String BASE_URL) {
            return specification = given()
                    .baseUri(BASE_URL)
                    .contentType(ContentType.JSON)

@@ -1,7 +1,6 @@
 
-package DTO;
+package dto;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreType;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.*;
 
@@ -18,4 +17,7 @@ public class User {
     private String phone;
     private Long userStatus;
     private String username;
+
+    public User() {}
+
 }
