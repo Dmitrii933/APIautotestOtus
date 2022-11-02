@@ -142,7 +142,7 @@ userNew.receiveUser(userNameReq)
                 .body("message", equalTo(userIdIUpd));
     }
 
-    //Мне нужно чтобы потом юзать))
+    //Мне нужно чтобы потом юзать (НЕ ОБРАЩАТЬ ВНИМАНИЕ!)
   /*  //Проверка создания пользователя из ответа через Pojo
     @Test
     public void checkPojoCreateUser() {
