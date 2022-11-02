@@ -19,7 +19,7 @@ public class CreateUser_Test {
     private FakeValuesService fakeValuesService = new FakeValuesService(
             new Locale("en-GB"), new RandomService());
 
-    //Проверка создания пользователя из ответа через RestAssured
+    //Проверка создания пользователя
     @Test
     public void checkCreateUser() {
         UserNew userNew = new UserNew();
@@ -60,7 +60,7 @@ public class CreateUser_Test {
 
 
     }
-
+//Проверка удаления юзера
     @Test
     public void checkDeleteUser() {
         UserNew userNew = new UserNew();
@@ -97,7 +97,7 @@ userNew.receiveUser(userNameReq)
         .body("type", equalTo("error"));
 
     }
-
+    //Проверка обновления юзера
     @Test
     public void CheckUpdateUser() {
         UserNew userNew = new UserNew();
@@ -142,7 +142,7 @@ userNew.receiveUser(userNameReq)
                 .body("message", equalTo(userIdIUpd));
     }
 
-
+    //Мне нужно чтобы потом юзать))
   /*  //Проверка создания пользователя из ответа через Pojo
     @Test
     public void checkPojoCreateUser() {

@@ -7,8 +7,8 @@ import static io.restassured.RestAssured.given;
 
 public class Specification {
         private RequestSpecification specification;
-
-       public RequestSpecification spec(String BASE_URL) {
+    private  String BASE_URL = System.getProperty("base.url");
+       public RequestSpecification spec() {
            return specification = given()
                    .baseUri(BASE_URL)
                    .contentType(ContentType.JSON)

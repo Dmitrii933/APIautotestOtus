@@ -10,8 +10,7 @@ import static io.restassured.RestAssured.given;
 public class UserNew {
     private  static final String PATH_USER ="/user/";
     private Specification spec = new Specification();
-    private final  RequestSpecification specification = spec.spec("https://petstore.swagger.io/v2");
-
+    private RequestSpecification specification = spec.spec();
 
     public ValidatableResponse createUser(User user){
 
@@ -24,6 +23,8 @@ public class UserNew {
     }
 
     public ValidatableResponse receiveUser(String user){
+
+
         return given(specification)
                 .when()
                 .get(PATH_USER+user)
