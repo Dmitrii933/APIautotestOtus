@@ -35,7 +35,6 @@ public class CreateUser_Test {
                 .build();
 
        String userNameReq = user.getUsername();
-       String userFirstNameReq = user.getFirstName();
        String userIdReq = Long.toString(user.getId());
 
         UserOut userOut = userNew.createUser(user)
