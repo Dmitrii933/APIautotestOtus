@@ -61,13 +61,10 @@
                 <artifactId>maven-checkstyle-plugin</artifactId>
                 <version>${checkstyle.version}</version>
                 <configuration>
-                    <includeTestSourceDirectory>true</includeTestSourceDirectory>
-
+                    <configLocation>google_checks.xml</configLocation>
                 </configuration>
                 <executions>
                     <execution>
-                        <id>analyze-compile</id>
-                        <phase>compile</phase>
                         <goals>
                             <goal>check</goal>
                         </goals>

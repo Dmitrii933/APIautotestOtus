@@ -53,10 +53,7 @@ public class CreateUser_Test {
               .body()
               .as(User.class);
 
-      String userNameRes = userRes.getUsername();
-      String userFirstNameRes = userRes.getFirstName();
-      Assertions.assertEquals(userNameReq, userNameRes,"Incorrect message");
-        Assertions.assertEquals(userFirstNameReq, userFirstNameRes,"Incorrect message");
+      Assertions.assertEquals(user, userRes,"Incorrect user");
 
 
     }
@@ -99,7 +96,7 @@ userNew.receiveUser(userNameReq)
     }
     //Проверка обновления юзера
     @Test
-    public void CheckUpdateUser() {
+    public void сheckUpdateUser() {
         UserNew userNew = new UserNew();
         User user = User.builder()
                 .id(faker.number().randomNumber())
@@ -140,6 +137,8 @@ userNew.receiveUser(userNameReq)
         userNew.updateUser(userUpdate, userNameReq)
                 .statusCode(200)
                 .body("message", equalTo(userIdIUpd));
+
+        Assertions.assertNotEquals(user,userUpdate,"User not update");
     }
 
     //Мне нужно чтобы потом юзать (НЕ ОБРАЩАТЬ ВНИМАНИЕ!)
