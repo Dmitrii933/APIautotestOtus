@@ -10,14 +10,13 @@ import lombok.NoArgsConstructor;
 @Data
 @Builder
 @AllArgsConstructor
-
 public class UserOut {
 
-    private Long Code;
+    private Long code;
 
-    private String Message;
+    private String message;
 
-    private String Type;
+    private String type;
 
     public UserOut() {}
 }
