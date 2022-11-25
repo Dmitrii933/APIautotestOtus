@@ -9,10 +9,12 @@ public class Specification {
         private RequestSpecification specification;
     private  String BASE_URL = System.getProperty("base.url");
        public RequestSpecification spec() {
-           return specification = given()
+           specification = given()
                    .baseUri(BASE_URL)
                    .contentType(ContentType.JSON)
                    .log().all();
+
+           return specification;
 
        }
     }
