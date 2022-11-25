@@ -140,6 +140,21 @@ userNew.receiveUser(userNameReq)
         Assertions.assertNotEquals(user,userUpdate,"User not update");
     }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     //Мне нужно чтобы потом юзать (НЕ ОБРАЩАТЬ ВНИМАНИЕ!)
   /*  //Проверка создания пользователя из ответа через Pojo
     @Test
