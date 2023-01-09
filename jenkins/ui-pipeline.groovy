@@ -20,8 +20,6 @@ timeout(60) {
                     jdk: '',
                     properties: [],
                     reportBuilsPolicy: 'ALWAYS',
-                    
-
             ])
         }
     }
